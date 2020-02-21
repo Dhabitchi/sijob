@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td class="p-1">Job</td>
-                <td class="p-1"><input type="text" name="job" required="#" value="{{$rekapjob->job}}"></td>
+                <td class="p-1 col-6"><input type="text" name="job" required="#" value="{{$rekapjob->job}}" class="col-6 form-control"></td>
             </tr>
             <tr>
                 <td class="p-1">Dhabit</td>
