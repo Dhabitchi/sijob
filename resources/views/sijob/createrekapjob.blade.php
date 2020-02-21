@@ -8,10 +8,12 @@
             <tr>
                 <td class="p-1">Nama</td>
                 <td class="p-1"><select type="text" name="nama" required="#" class="custom-select">
-                        <option selected>Choose...</option>
-                        @foreach($user as $data)
-                            <option>{{$data->name}}</option>
-                        @endforeach
+                        <option selected>{{auth()->user()->name}}</option>
+                        @if(auth()->user()->role=='admin')
+                            @foreach($user as $data)
+                                <option>{{$data->name}}</option>
+                            @endforeach
+                        @endif
                     </select><br></td>
             </tr>
             <tr>

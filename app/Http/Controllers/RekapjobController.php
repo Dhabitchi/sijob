@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use App\Rekapjob;
+use App\User;
 use Exception;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
@@ -46,7 +46,7 @@ class RekapjobController extends Controller
      */
     public function store(Request $request)
     {
-        Rekapjob::create($request->only(['nama', 'job', 'waktu', 'waktu2']));
+        Rekapjob::create($request->only(['nama', 'job', 'waktu', 'waktu2']) + ['status' => 'berjalan']);
 
         return redirect()->route('rekapjob');
     }
@@ -70,7 +70,9 @@ class RekapjobController extends Controller
      */
     public function edit(Rekapjob $rekapjob)
     {
-        return view('sijob.editrekapjob', compact('rekapjob'));
+        $user = User::all();
+
+        return view('sijob.editrekapjob', compact('rekapjob','user'));
     }
 
     /**
@@ -83,11 +85,12 @@ class RekapjobController extends Controller
     public function update(Request $request, Rekapjob $rekapjob)
     {
         $rekapjob->update([
-                'nama' => $request->nama,
-                'job' => $request->job,
-                'waktu' => $request->waktu,
-                'waktu2' => $request->waktu2
-            ]);
+            'nama' => $request->nama,
+            'job' => $request->job,
+            'waktu' => $request->waktu,
+            'waktu2' => $request->waktu2,
+            'status' => $request->status
+        ]);
         return redirect()->route('rekapjob');
     }
 

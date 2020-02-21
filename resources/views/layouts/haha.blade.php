@@ -47,16 +47,16 @@
                     </a>
                 </li>
                 @endif
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('entrijob') }}">
-                        <i class="nc-icon nc-chart-pie-35"></i>
-                        <p>Entri Job</p>
-                    </a>
-                </li>
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link" href="{{ route('entrijob') }}">--}}
+{{--                        <i class="nc-icon nc-chart-pie-35"></i>--}}
+{{--                        <p>Entri Job</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('rekapjob') }}">
                         <i class="nc-icon nc-chart-pie-35"></i>
-                        <p>Rekap Job</p>
+                        <p>Entri Job</p>
                     </a>
                 </li>
             </ul>
@@ -88,16 +88,17 @@
                         {{--                            </a>--}}
                         {{--                        </li>--}}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="no-icon">Setting Master</span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="{{route('staff')}}">Staff</a>
+{{--                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"--}}
+{{--                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--                                <span class="no-icon">Setting Master</span>--}}
+{{--                            </a>--}}
+{{--                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">--}}
+{{--                                <a class="dropdown-item" href="#">Status</a>--}}
+{{--                                <a class="dropdown-item" href="{{route('staff')}}">Staff</a>--}}
 {{--                                <a class="dropdown-item" href="#">Type Job</a>--}}
-                                <a class="dropdown-item" href="{{route('status')}}">Status</a>
+{{--                                <a class="dropdown-item" href="{{route('status')}}">Status</a>--}}
 {{--                                <a class="dropdown-item" href="#">Tahun Ajaran</a>--}}
-                            </div>
+{{--                            </div>--}}
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}"

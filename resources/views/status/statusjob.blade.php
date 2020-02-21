@@ -16,7 +16,7 @@
                 <tr>
                     <td> {{$loop->iteration}} </td>
                     <td>{{$data->name}}</td>
-                    <td>Selesai</td>
+                    <td>{{$data->status}}</td>
                 </tr>
             @endforeach
             </tbody>
