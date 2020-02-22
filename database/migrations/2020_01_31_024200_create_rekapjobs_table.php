@@ -19,7 +19,7 @@ class CreateRekapjobsTable extends Migration
             $table->string('job');
             $table->date('waktu');
             $table->date('waktu2');
-            $table->enum('status', array(['selesai','berhasil']));
+            $table->enum('status', array(['selesai','berjalan']));
             $table->timestamps();
         });
     }
