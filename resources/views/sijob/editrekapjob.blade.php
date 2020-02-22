@@ -33,7 +33,7 @@
             <tr>
                 <td class="p-1">Status</td>
                 <td class="p-1">
-                    <select name="status" class="form-control">
+                    <select name="status" class="custom-select">
                         <option value="selesai">Selesai</option>
                         <option value="berjalan">Berjalan</option>
                     </select>
