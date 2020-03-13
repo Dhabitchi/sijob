@@ -10,6 +10,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class RekapjobController extends Controller
@@ -21,7 +22,7 @@ class RekapjobController extends Controller
      */
     public function index()
     {
-        $rekapjob = Rekapjob::all();
+        $rekapjob = Rekapjob::where('nama', '=', Auth::user()->name)->get() ; 
 
         return view('sijob.rekapjob', ['rekapjob' => $rekapjob]);
     }
